@@ -244,11 +244,13 @@ jQuery(function($) {
 
                 input.focus(function() {
                     complete.fadeIn("fast");
+                    holder.addClass('focused');
                 });
 
                 input.blur(function() {
                     if (options.complete_hover) {
                       complete.fadeOut("fast");
+                      holder.removeClass('focused');
                     }
                     else {
                       input.focus();
